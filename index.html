@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf8">
+</head>
+
+<body>
+    <h1>Cat vs Dog</h1>
+    <input type="file" id="inp" multiple="multiple">
+    <button id="btn" onclick="go()">Predict</button>
+
+    <script type="text/javascript">
+        async function go() {
+            let photo = document.getElementById("inp").files[0];
+            let formData = new FormData();
+
+            formData.append("photo", photo);
+            fetch('upload/', { method: "POST", body: formData });
+        }
+    </script>
+</body>
+
+</html>
