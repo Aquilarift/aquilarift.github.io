@@ -1,3 +1,4 @@
+TEST
 <?php
 
 $targetPath = "uploads/" . "1.jpg";
